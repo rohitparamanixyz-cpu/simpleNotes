@@ -34,6 +34,31 @@ ul {
     cursor: pointer;
 }
 
+.input-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notes-area {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+h2,
+.note-title-area{
+    font-size: 1.5rem;
+    padding: 3px;
+    margin-bottom: 8px;
+}
+
+p,
+textarea {
+    padding: 6px;
+    margin-bottom: 12px; 
+}
+
 .input-field {
     display: flex;
     flex-direction: column;
@@ -56,14 +81,6 @@ ul {
 
 textarea {
     resize: none;
-    padding: 6px;
-    margin-bottom: 12px;
-}
-
-.note-title-area {
-    font-size: 1.5rem;
-    padding: 3px;
-    margin-bottom: 8px;
 }
 
 
@@ -83,3 +100,4 @@ textarea:active,
     cursor: pointer;
     box-shadow: 3px 3px #f4f4f4;
 }
+
