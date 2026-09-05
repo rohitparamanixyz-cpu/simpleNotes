@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple notes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!--Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="icon"><i class="fa-solid fa-lightbulb"></i></li>
+                <li class="logo">simpleNotes</li>
+                <li class="icon"><i class="fa-solid fa-bars"></i></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <div class="input-field">
+            <input type="text" id="note-title-area" class="note-title-area" placeholder="Title">
+            <textarea name="note-text-area" id="note-text-area" class="note-text-area" rows="1" cols="50" placeholder="Take a note..." autocorrect="on"></textarea>
+            <button class="save-btn" id="save-btn">save</button>
+        </div>
+    </section>
+
+    <section>
+        <div class="saved-notes"></div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
