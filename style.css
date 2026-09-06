@@ -30,7 +30,7 @@ ul {
     cursor: pointer;
 }
 
-.icon:hover {
+i:hover {
     cursor: pointer;
 }
 
@@ -38,25 +38,6 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.notes-area {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-h2,
-.note-title-area{
-    font-size: 1.5rem;
-    padding: 3px;
-    margin-bottom: 8px;
-}
-
-p,
-textarea {
-    padding: 6px;
-    margin-bottom: 12px; 
 }
 
 .input-field {
@@ -79,8 +60,16 @@ textarea {
     color: #f4f4f4;
 }
 
+input {
+    font-size: 1.5rem;
+    padding: 3px;
+    margin-bottom: 8px;
+}
+
 textarea {
     resize: none;
+    padding: 6px;
+    margin-bottom: 12px;
 }
 
 
@@ -99,5 +88,81 @@ textarea:active,
     border-radius: 4px;
     cursor: pointer;
     box-shadow: 3px 3px #f4f4f4;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
 }
 
+.save-btn:hover {
+    background-color: #f5cc4a;
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px #f4f4f4;
+}
+
+.save-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px #f4f4f4;
+    background-color: #d9ac28;
+}
+
+.notes-area {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.saved-notes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.note {
+    width: 360px;
+    margin: 24px;
+    padding: 16px;
+    border: 2px solid #484848;
+    border-radius: 8px;
+    height: 140px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+    position: relative;
+    z-index: 1;
+    background-color: #212024;
+    transition: height 0.2s ease, z-index 0s;
+}
+
+.note:hover {
+    height: auto;
+    min-height: 140px;
+    overflow: visible;
+    z-index: 10;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.note-content h2 {
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.note-content p {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.4;
+    color: #d4d4d4;
+}
+
+.note .fa-trash {
+    align-self: flex-end;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.note .fa-trash:hover {
+    color: #e05252;
+}
